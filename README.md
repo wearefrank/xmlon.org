@@ -9,13 +9,27 @@ XON is an XML-based format for representing JSON data without losing type inform
 - ✅ Supports invalid XML element names via `xon:name` attribute
 - ✅ Bidirectional conversion (JSON ↔ XON)
 - ✅ Pretty-printed XML output
+- ✅ Streaming Java implementation for memory-efficient processing of large JSON files
 
 ## Quick Start
 
-### Convert JSON to XON
+### Convert JSON to XON (Python)
 
 ```bash
 python json_to_xon.py examples/simple.json output.xon.xml
+```
+
+### Convert JSON to XON (Java - Streaming)
+
+```bash
+# Build the project
+mvn clean package
+
+# Run the converter
+java -cp target/json-to-xon-streaming-1.0.0-jar-with-dependencies.jar org.xmlon.JsonToXonStreaming examples/simple.json output.xon.xml
+
+# Or use the executable JAR
+java -jar target/json-to-xon-streaming-1.0.0-jar-with-dependencies.jar examples/simple.json output.xon.xml
 ```
 
 ### Convert XON to JSON
@@ -39,6 +53,23 @@ print(xon_xml)
 # XON to JSON
 json_data = xon_to_json(xon_xml)
 print(json.dumps(json_data, indent=2))
+```
+
+### Java API (Streaming)
+
+```java
+import org.xmlon.JsonToXonStreaming;
+import java.io.*;
+
+// Convert file
+JsonToXonStreaming converter = new JsonToXonStreaming();
+converter.convertFile("input.json", "output.xon.xml", "json");
+
+// Convert streams
+try (FileInputStream jsonInput = new FileInputStream("input.json");
+     FileOutputStream xmlOutput = new FileOutputStream("output.xon.xml")) {
+    converter.convert(jsonInput, xmlOutput, "json");
+}
 ```
 
 ## Format Specification
