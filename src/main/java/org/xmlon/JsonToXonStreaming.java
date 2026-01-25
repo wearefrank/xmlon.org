@@ -7,7 +7,6 @@ import javax.xml.stream.XMLOutputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
 import java.io.*;
-import java.util.Stack;
 
 /**
  * Streaming JSON to XON (XML Object Notation) converter.
@@ -15,6 +14,12 @@ import java.util.Stack;
  * This class converts JSON data to XON XML format in a streaming manner,
  * processing the JSON input incrementally without loading the entire
  * document into memory.
+ * 
+ * Implementation details:
+ * - Uses Jackson's JsonParser which reads JSON token-by-token from the stream
+ * - Uses StAX XMLStreamWriter which writes XML incrementally
+ * - Only processes one JSON token at a time, keeping memory usage constant
+ * - Can handle arbitrarily large JSON files without memory issues
  */
 public class JsonToXonStreaming {
     
@@ -45,6 +50,8 @@ public class JsonToXonStreaming {
             rootName = DEFAULT_ROOT_NAME;
         }
         
+        // JsonParser reads token-by-token from the stream (true streaming, no full file load)
+        // XMLStreamWriter writes incrementally to the output stream
         try (JsonParser parser = jsonFactory.createParser(jsonInput);
              OutputStreamWriter writer = new OutputStreamWriter(xmlOutput, "UTF-8")) {
             
