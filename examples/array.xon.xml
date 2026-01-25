@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<json xmlns:xon="https://xmlon.org/" xon:type="array">
+  <item xon:type="string">apple</item>
+  <item xon:type="string">banana</item>
+  <item xon:type="string">cherry</item>
+  <item xon:type="number">42</item>
+  <item xon:type="boolean">true</item>
+  <item xon:type="null"/>
+</json>

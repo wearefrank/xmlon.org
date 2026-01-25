@@ -1,0 +1,10 @@
+{
+  "name": "John",
+  "age": 30,
+  "active": true,
+  "tags": ["developer", "python"],
+  "address": {
+    "street": "123 Main St",
+    "city": "New York"
+  }
+}

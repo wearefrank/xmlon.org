@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<json xmlns:xon="https://xmlon.org/" xon:type="object">
+  <name xon:type="string">John</name>
+  <age xon:type="number">30</age>
+  <active xon:type="boolean">true</active>
+  <tags xon:type="array">
+    <item xon:type="string">developer</item>
+    <item xon:type="string">python</item>
+  </tags>
+  <address xon:type="object">
+    <street xon:type="string">123 Main St</street>
+    <city xon:type="string">New York</city>
+  </address>
+</json>

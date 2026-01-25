@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<json xmlns:xon="https://xmlon.org/" xon:type="object">
+  <user xon:type="object">
+    <name xon:type="string">John Doe</name>
+    <email xon:type="string">john@example.com</email>
+    <prop xon:name="123invalid" xon:type="string">starts with number</prop>
+    <my-key xon:type="string">contains dash</my-key>
+    <special.chars xon:type="string">has dots</special.chars>
+    <nested xon:type="object">
+      <deep xon:type="object">
+        <value xon:type="number">42</value>
+      </deep>
+    </nested>
+  </user>
+  <items xon:type="array">
+    <item xon:type="object">
+      <id xon:type="number">1</id>
+      <name xon:type="string">Item 1</name>
+      <price xon:type="number">19.99</price>
+      <in_stock xon:type="boolean">true</in_stock>
+    </item>
+    <item xon:type="object">
+      <id xon:type="number">2</id>
+      <name xon:type="string">Item 2</name>
+      <price xon:type="number">29.99</price>
+      <in_stock xon:type="boolean">false</in_stock>
+      <tags xon:type="array">
+        <item xon:type="string">new</item>
+        <item xon:type="string">featured</item>
+      </tags>
+    </item>
+  </items>
+  <metadata xon:type="object">
+    <created xon:type="string">2025-01-25</created>
+    <version xon:type="number">1</version>
+    <active xon:type="boolean">true</active>
+    <null_value xon:type="null"/>
+  </metadata>
+</json>
