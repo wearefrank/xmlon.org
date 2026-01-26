@@ -1,0 +1,32 @@
+## Maven / Java build output
+target/
+**/target/
+
+## Java compiled artifacts
+*.class
+
+## IDE / OS noise
+.idea/
+*.iml
+.vscode/
+Thumbs.db
+Desktop.ini
+
+## Python cache (this repo has Python too)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+## Python virtualenvs
+.venv/
+venv/
+env/
+
+## Python packaging/build output
+*.egg-info/
+dist/
+build/
