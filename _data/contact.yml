@@ -1,0 +1,4 @@
+# Contact options shown in sidebar (GitHub link uses site.github.username from _config.yml)
+
+- type: github
+  icon: "fa-brands fa-github"
