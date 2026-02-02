@@ -1,0 +1,38 @@
+{
+  "user": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "123invalid": "starts with number",
+    "my-key": "contains dash",
+    "special.chars": "has dots",
+    "nested": {
+      "deep": {
+        "value": 42
+      }
+    }
+  },
+  "items": [
+    {
+      "id": 1,
+      "name": "Item 1",
+      "price": 19.99,
+      "in_stock": true
+    },
+    {
+      "id": 2,
+      "name": "Item 2",
+      "price": 29.99,
+      "in_stock": false,
+      "tags": [
+        "new",
+        "featured"
+      ]
+    }
+  ],
+  "metadata": {
+    "created": "2025-01-25",
+    "version": 1,
+    "active": true,
+    "null_value": null
+  }
+}

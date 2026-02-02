@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>XON – XML Object Notation | XON (XML Object Notation)</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="XON – XML Object Notation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="XML-based format for representing JSON data without losing type information." />
+<meta property="og:description" content="XML-based format for representing JSON data without losing type information." />
+<meta property="og:site_name" content="XON (XML Object Notation)" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="XON – XML Object Notation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"XML-based format for representing JSON data without losing type information.","headline":"XON – XML Object Notation","name":"XON (XML Object Notation)","url":"/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">XON – XML Object Notation</h1>
+      <h2 class="project-tagline">XML-based format for representing JSON data without losing type information.</h2>
+      
+        <a href="" class="btn">View on GitHub</a>
+      
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <h1 id="xon-xml-object-notation">XON (XML Object Notation)</h1>
+
+<p>XON is an <strong>XML-based format for representing JSON data without losing type information</strong>.<br />
+It uses attributes in the <code class="language-plaintext highlighter-rouge">xon:</code> namespace to preserve JSON types such as objects, arrays, strings, numbers, booleans, and nulls.</p>
+
+<h2 id="why-xon">Why XON?</h2>
+
+<ul>
+  <li><strong>Preserves all JSON type information</strong> (object, array, string, number, boolean, null)</li>
+  <li><strong>Handles nested structures</strong> cleanly</li>
+  <li><strong>Supports invalid XML element names</strong> via the <code class="language-plaintext highlighter-rouge">xon:name</code> attribute</li>
+  <li><strong>Bidirectional conversion</strong> between JSON and XON</li>
+  <li><strong>Pretty-printed XML output</strong></li>
+  <li><strong>Streaming Java implementation</strong> for large JSON files</li>
+</ul>
+
+<h2 id="specification">Specification</h2>
+
+<p>The full format specification is documented in <code class="language-plaintext highlighter-rouge">XON_SPECIFICATION.md</code> in the repository.</p>
+
+<ul>
+  <li><strong>Namespace URI</strong>: <code class="language-plaintext highlighter-rouge">https://xmlon.org/</code></li>
+  <li><strong>Prefix</strong>: <code class="language-plaintext highlighter-rouge">xon:</code></li>
+  <li><strong>Namespace declaration</strong>: <code class="language-plaintext highlighter-rouge">xmlns:xon="https://xmlon.org/"</code></li>
+</ul>
+
+<p>Key type attributes:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">xon:type="object"</code> – JSON object</li>
+  <li><code class="language-plaintext highlighter-rouge">xon:type="array"</code> – JSON array</li>
+  <li><code class="language-plaintext highlighter-rouge">xon:type="string"</code> – JSON string</li>
+  <li><code class="language-plaintext highlighter-rouge">xon:type="number"</code> – JSON number</li>
+  <li><code class="language-plaintext highlighter-rouge">xon:type="boolean"</code> – JSON boolean</li>
+  <li><code class="language-plaintext highlighter-rouge">xon:type="null"</code> – JSON null</li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<p>The <code class="language-plaintext highlighter-rouge">examples/</code> directory contains sample JSON and XON files:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">simple.json</code> ⇄ <code class="language-plaintext highlighter-rouge">simple.xon.xml</code></li>
+  <li><code class="language-plaintext highlighter-rouge">array.json</code> ⇄ <code class="language-plaintext highlighter-rouge">array.xon.xml</code></li>
+  <li><code class="language-plaintext highlighter-rouge">complex.json</code> ⇄ <code class="language-plaintext highlighter-rouge">complex.xon.xml</code></li>
+  <li><code class="language-plaintext highlighter-rouge">complex_roundtrip.json</code></li>
+</ul>
+
+<p>You can use these to see how typical JSON structures map into XON.</p>
+
+<h2 id="using-xon">Using XON</h2>
+
+<p>The repository includes implementations and helpers for converting between JSON and XON from Python and Java (streaming).</p>
+
+<p>See <code class="language-plaintext highlighter-rouge">README.md</code> in the repository for:</p>
+
+<ul>
+  <li>Command-line examples</li>
+  <li>Python API usage</li>
+  <li>Java streaming API usage</li>
+</ul>
+
+<h2 id="how-to-publish-this-site-on-github-pages">How to Publish This Site on GitHub Pages</h2>
+
+<ol>
+  <li><strong>Create a GitHub repository</strong> with this folder (<code class="language-plaintext highlighter-rouge">xmlon.org</code>) as the root of the repo.</li>
+  <li>Commit and push the files, including <code class="language-plaintext highlighter-rouge">_config.yml</code> and <code class="language-plaintext highlighter-rouge">index.md</code>, to the default branch (e.g. <code class="language-plaintext highlighter-rouge">main</code>).</li>
+  <li>In GitHub, go to <strong>Settings → Pages</strong> for the repository.</li>
+  <li>Under <strong>Source</strong>, select the branch (e.g. <code class="language-plaintext highlighter-rouge">main</code>) and <strong>root</strong> (or <code class="language-plaintext highlighter-rouge">/</code>), then save.</li>
+  <li>GitHub Pages will build the site using Jekyll and the <code class="language-plaintext highlighter-rouge">jekyll-theme-cayman</code> theme; your homepage will be this <code class="language-plaintext highlighter-rouge">index.md</code>.</li>
+</ol>
+
+<p>Optionally, you can configure a custom domain (such as <code class="language-plaintext highlighter-rouge">xmlon.org</code>) in the same <strong>Settings → Pages</strong> section and by adding the appropriate DNS records.</p>
+
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href=""></a> is maintained by <a href=""></a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
