@@ -1,0 +1,6 @@
+title: XON (XML Object Notation)
+description: "XML-based format for representing JSON data without losing type information."
+theme: jekyll-theme-cayman
+markdown: kramdown
+github:
+  is_project_page: true
