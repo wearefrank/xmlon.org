@@ -1,6 +1,8 @@
-# XON (XML Object Notation)
+# XON (XML Object Notation) or typed xml
 
 XON is an XML-based format for representing JSON data without losing type information. It uses attributes in the `xon:` namespace to specify data types.
+
+
 
 ## Features
 
